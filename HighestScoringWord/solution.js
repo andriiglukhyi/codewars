@@ -1,15 +1,19 @@
 function high(x){
-    var alf1 = "abcdefghijklmnopqrstuvwxyz".split('');
-   var arr = x.split(' ').filter(c => c.length>2).reduce(function(a,b){
-            var x = a.split('').reduce(function(a,b) {return alf1.indexOf(a) + alf1.indexOf(b)});
-            var y = b.split('').reduce(function(a,b) {return alf1.indexOf(a) + alf1.indexOf(b)});
-
-            if  (x>y){
-                return a;
-            } else { 
-                return b;
-            }
-        });
-
-        return arr;
+    var strArr = x.split(" ");
+    var highestValue = 0;
+    var returnWord = "";
+    for (var i = 0; i < strArr.length; i++)
+    {
+      var word = strArr[i];
+      var wordValue = 0;
+      for (var j = 0; j < word.length; j++)
+      {
+          wordValue += (word.charCodeAt(j)-96);
+          if (wordValue > highestValue)
+          {
+              highestValue = wordValue;
+              returnWord = word;
+          }
+      }      
     }
+    return returnWord;
