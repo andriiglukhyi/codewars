@@ -1,0 +1,1 @@
+https://www.codewars.com/kata/who-is-going-to-pay-for-the-wall/train/python
