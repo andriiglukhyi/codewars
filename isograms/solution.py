@@ -5,3 +5,6 @@ def is_isogram(string):
         if new.count(item)>1:
             return False
     return True
+
+
+    
