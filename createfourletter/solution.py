@@ -4,7 +4,7 @@ def bird_code(arr):
         if '-'in item:
             item = item.replace('-', ' ')
         temp = item.split(' ')
-        if len (temp) == 1:
+        if len(temp) == 1:
             new.append(temp[0][:4].upper())
         if len(temp) == 2:
             new.append(temp[0][:2].upper() + temp[1][:2].upper())
